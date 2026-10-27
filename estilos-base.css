@@ -180,7 +180,7 @@ h1 {
 }
 
 .seccion {
-  margin: 88px 72px;
+   margin: clamp(4rem, 8vw, 6rem) clamp(1.25rem, 5vw, 4.5rem);
 }
 
 .encabezado-seccion {
@@ -205,16 +205,16 @@ h1 {
 }
 
 .rejilla-cursos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+ display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .tarjeta {
-  min-height: 290px;
-  padding: 25px;
+   min-width: 0;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
   border: 1px solid #e7e8ef;
-  border-radius: 16px;
+  border-radius: 1rem;
   background: white;
 }
 
@@ -250,7 +250,6 @@ h1 {
 }
 
 .tarjeta > p:not(.categoria) {
-  min-height: 48px;
   color: #687186;
   line-height: 1.5;
 }
@@ -306,14 +305,13 @@ h1 {
 }
 
 .proyecto {
-  min-height: 220px;
-  margin: 0 72px 80px;
-  padding: 36px 48px;
+   margin: 0 clamp(1.25rem, 5vw, 4.5rem) clamp(4rem, 7vw, 5rem);
+  padding: clamp(1.75rem, 4vw, 3rem);
   display: grid;
-  grid-template-columns: 90px 1fr auto;
+  grid-template-columns: 4.75rem minmax(0, 1fr) auto;
   align-items: center;
-  gap: 26px;
-  border-radius: 20px;
+  gap: clamp(1rem, 3vw, 2rem);
+  border-radius: 1.25rem;
   background: #242044;
   color: white;
 }
